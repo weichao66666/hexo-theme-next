@@ -21,12 +21,12 @@
 
   <div class="{{ container_class }} {% block page_class %}{% endblock %} ">
     <div class="headband"></div>
+	
+	<img style="position: absolute; top: 0; right: 0; border: 0;" src="/images/wanted.png">
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"> {%- include '_partials/header.swig' %} </div>
     </header>
-	
-	<img style="position: absolute; top: 0; left: 0; border: 0;" src="/images/wanted.png">
 
     <main id="main" class="main">
       <div class="main-inner">
