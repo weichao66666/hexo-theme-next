@@ -8,7 +8,19 @@
   <span class="author" itemprop="copyrightHolder">{{ config.author }}</span>
 </div>
 
-{% if theme.copyright %}
+<!--在网站底部加上访问量-->
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv">
+	本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+</span>
+
+<!--网站底部字数统计-->
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">本站总字数 {{ totalcount(site) }} 字 </span>
+</div>
+
+<!--{% if theme.copyright %}
 <div class="powered-by">
   {{ __('footer.powered', '<a class="theme-link" href="https://hexo.io">Hexo</a>') }}
 </div>
@@ -19,4 +31,4 @@
     NexT.{{ theme.scheme }}
   </a>
 </div>
-{% endif %}
+{% endif %}-->
