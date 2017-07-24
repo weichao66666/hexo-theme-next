@@ -173,21 +173,6 @@
             {% endif %}
           {% endif %}
 
-          {# LeanCould PageView #}
-          {% if theme.leancloud_visitors.enable %}
-             <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               {% if theme.post_meta.item_text %}
-                 <span class="post-meta-item-text">{{__('post.visitors')}} </span>
-               {% endif %}
-                 <span class="leancloud-visitors-count"></span>
-				 <span>℃</span>
-             </span>
-          {% endif %}
-
           {% if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.page_pv %}
             <span class="post-meta-divider">|</span>
             <span class="page-pv">{{ theme.busuanzi_count.page_pv_header }}
@@ -228,6 +213,21 @@
                 </span>
               {% endif %}
             </div>
+          {% endif %}
+
+          {# LeanCould PageView #}
+          {% if theme.leancloud_visitors.enable %}
+             <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               {% if theme.post_meta.item_text %}
+                 <span class="post-meta-item-text">{{__('post.visitors')}} </span>
+               {% endif %}
+                 <span class="leancloud-visitors-count"></span>
+				 <span> ℃</span>
+             </span>
           {% endif %}
 
           {% if post.description and (not theme.excerpt_description or not is_index) %}
